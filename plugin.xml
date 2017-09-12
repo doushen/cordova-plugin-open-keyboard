@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin id="cordova-plugin-open-keyboard" version="1.0.0"
+        xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>OpenKeyboard</name>
+    <description>自定义软键盘</description>
+    <js-module name="OpenKeyboard" src="www/OpenKeyboard.js">
+        <clobbers target="window.plugins.openKeyboard"/>
+    </js-module>
+    
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="OpenKeyboard">
+                <param name="android-package" value="cordova.plugins.OpenKeyboard"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/OpenKeyboard.java" target-dir="src/cordova/plugins"/>
+    </platform>
+    <platform name="ios">
+
+        <config-file parent="/*" target="config.xml">
+            <feature name="OpenKeyboard">
+                <param name="ios-package" value="OCPOpenKeyboard" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/OCPOpenKeyboard.h"/>
+        <source-file src="src/ios/OCPOpenKeyboard.m"/>
+    </platform>
+</plugin>

@@ -1,0 +1,25 @@
+{
+  "name": "cordova-plugin-open-keyboard",
+  "version": "1.0.0",
+  "description": "cordova-plugin-open-keyboard",
+  "cordova": {
+    "id": "cordova-plugin-open-keyboard",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/doushen/cordova-plugin-open-keyboard.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cordova-plugin-open-keyboard"
+  ],
+  "author": "liyn",
+  "license": "MIT"
+}
